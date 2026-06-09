@@ -1,0 +1,10 @@
+{
+  "build": {
+    "builder": "NIXPACKS"
+  },
+  "deploy": {
+    "startCommand": "/v2ray/v2ray run -c /v2ray/config.json",
+    "healthcheckPath": "/",
+    "restartPolicy": "on-failure"
+  }
+}
