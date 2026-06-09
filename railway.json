@@ -3,8 +3,10 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "/v2ray/v2ray run -c /v2ray/config.json",
+    "startCommand": "xray run -c /etc/xray/config.json",
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 3,
     "healthcheckPath": "/",
-    "restartPolicy": "on-failure"
+    "healthcheckTimeout": 100
   }
 }
