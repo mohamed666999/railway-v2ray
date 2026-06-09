@@ -1,7 +1,9 @@
 FROM ghcr.io/xtls/xray-core:latest
 
+RUN mkdir -p /etc/xray
+
 COPY config.json /etc/xray/config.json
 
 EXPOSE 443
 
-CMD ["run", "-c", "/etc/xray/config.json"]
+CMD ["xray", "run", "-c", "/etc/xray/config.json"]
